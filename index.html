@@ -97,10 +97,10 @@ nav.links a::after{
   background:var(--cempasuchil); transition:width 0.25s ease;
 }
 nav.links a:hover::after, nav.links a:focus-visible::after{width:100%;}
-.nav-cta{
-  background:var(--terracota); color:#fff !important; padding:9px 20px;
+nav.links a.nav-cta{
+  background:var(--terracota); color:#fff !important; padding:11px 22px;
   border-radius:var(--radius); font-weight:700; font-size:0.85rem; text-decoration:none;
-  white-space:nowrap; flex-shrink:0; display:inline-block;
+  white-space:nowrap; flex-shrink:0; display:inline-flex; align-items:center; line-height:1;
 }
 .nav-cta:hover{background:var(--terracota-dark);}
 .burger{display:none; background:none; border:none; cursor:pointer; padding:6px;}
@@ -233,12 +233,6 @@ section{padding:88px 0;}
 }
 .menu-item-desc{display:block; font-family:var(--body); font-weight:400; font-size:0.86rem; color:var(--cafe-soft); margin-top:3px; line-height:1.4;}
 .menu-item-price{font-family:var(--body); font-weight:800; font-size:1.05rem; color:var(--terracota-dark); white-space:nowrap;}
-
-.menu-download{
-  margin-top:48px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
-  background:var(--crema-2); padding:20px 24px; border-radius:8px; border:1px dashed var(--terracota);
-}
-.menu-download p{font-size:0.92rem; color:var(--cafe-soft); max-width:38ch;}
 
 .menu-back{display:flex; justify-content:center; margin-top:36px;}
 .menu-back-link{
@@ -698,11 +692,6 @@ footer .section-head p{color:rgba(246,236,217,0.7);}
         <div class="menu-item"><div class="menu-item-name">Con mole amarillo tlaxiaqueño<span class="menu-item-desc">Con mole amarillo, pollo y tostadas.</span></div><div class="menu-item-price">$119 / $79</div></div>
         <div class="menu-item"><div class="menu-item-name">Con pollo estilo Jalisco<span class="menu-item-desc">Con lechuga, rábano, cebolla, orégano, limón, crema y tostadas.</span></div><div class="menu-item-price">$119 / $79</div></div>
       </div>
-    </div>
-
-    <div class="menu-download reveal">
-      <p><strong>¿Prefieres el menú impreso?</strong> Descarga el menú completo en PDF para verlo o compartirlo.</p>
-      <a href="#" class="btn btn-ghost" id="menuPdfLink">Descargar PDF</a>
     </div>
 
     <div class="menu-back reveal">
