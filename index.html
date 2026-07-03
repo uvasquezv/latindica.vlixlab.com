@@ -321,7 +321,7 @@ section{padding:88px 0;}
 @media (max-width:860px){.loc-grid{grid-template-columns:1fr;}}
 
 /* ============ CONTACTO / FOOTER ============ */
-footer{background:var(--cafe); color:var(--crema); padding-top:80px;}
+footer{background:var(--cafe); color:var(--crema); padding-top:80px; padding-bottom:36px;}
 .contact-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center; padding-bottom:70px;}
 footer .section-head h2{color:#fff;}
 footer .section-head p{color:rgba(246,236,217,0.7);}
@@ -340,18 +340,30 @@ footer .section-head p{color:rgba(246,236,217,0.7);}
 }
 .footer-bottom .fw{font-family:var(--display); color:var(--cempasuchil); font-weight:600;}
 .footer-credit{
-  text-align:center; padding:14px 0 22px; font-size:0.76rem; color:rgba(246,236,217,0.4);
-  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;
+  text-align:center; padding:18px 24px; border-radius:10px; margin:28px 0 8px;
+  background:rgba(232,135,30,0.08); border:1px solid rgba(232,135,30,0.28);
 }
-.footer-credit a{color:rgba(246,236,217,0.65); text-decoration:none;}
-.footer-credit a:hover{color:var(--cempasuchil);}
+.footer-credit .fc-text{font-size:0.9rem; color:rgba(246,236,217,0.85); display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;}
+.footer-credit .fc-icon{color:var(--cempasuchil); width:18px; height:18px; flex-shrink:0;}
+.footer-credit .fc-text strong{color:var(--cempasuchil); font-family:var(--display); font-weight:700;}
+.footer-credit a.fc-link{
+  display:inline-flex; align-items:center; gap:6px; background:var(--cempasuchil); color:var(--cafe) !important;
+  font-weight:700; font-size:0.85rem; text-decoration:none; padding:9px 18px; border-radius:999px;
+  transition:background 0.2s, transform 0.2s;
+}
+.footer-credit a.fc-link:hover{background:#fff; transform:translateY(-2px);}
+@media (max-width:600px){.footer-credit{flex-direction:column; padding:20px;}}
 
 /* Scroll-triggered reveal */
 .reveal{opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease;}
 .reveal.in{opacity:1; transform:translateY(0);}
 
 .section-greca{color:var(--terracota);}
-.bg-jade .section-greca, .bg-cafe .section-greca{color:var(--cempasuchil);}
+.bg-jade .section-greca, .bg-cafe .section-greca{color:var(--cempasuchil);}@media (max-width:860px){
+  .contact-grid{grid-template-columns:1fr; gap:32px; padding-bottom:40px;}
+  .contact-cards{width:100%;}
+}
 </style>
 </head>
 <body>
@@ -406,6 +418,11 @@ footer .section-head p{color:rgba(246,236,217,0.7);}
     </symbol>
     <symbol id="ic-tiktok" viewBox="0 0 24 24">
       <path d="M14.2 3.3c.4 2.2 1.8 3.7 4 3.9v2.6c-1.4 0-2.8-.4-4-1.2v5.9a5 5 0 1 1-4.3-4.9v2.7a2.3 2.3 0 1 0 1.7 2.2V3.3h2.6z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="ic-code" viewBox="0 0 24 24">
+      <polyline points="8.5 6.5 3.5 12 8.5 17.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="15.5 6.5 20.5 12 15.5 17.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="13.3" y1="4.5" x2="10.7" y2="19.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
     </symbol>
   </defs>
 </svg>
@@ -998,7 +1015,8 @@ footer .section-head p{color:rgba(246,236,217,0.7);}
       <span>Puebla · Margaritas, México</span>
     </div>
     <div class="footer-credit">
-      Desarrollado por <a href="https://vlixlab.com/" target="_blank" rel="noopener">vlixlab.com</a>
+      <span class="fc-text"><svg class="icon-svg fc-icon"><use href="#ic-code"/></svg> Sitio diseñado y desarrollado por <strong>vlixlab.com</strong> — ¿quieres uno así para tu negocio?</span>
+      <a href="https://vlixlab.com/" target="_blank" rel="noopener" class="fc-link">Conoce vlixlab →</a>
     </div>
   </div>
 </footer>
